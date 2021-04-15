@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>La Resurrección</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="icon" href="img/logo.png" type="image/x-icon">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.division {
+  column-count: 2;
+  column-fill: balance;
+  column-width: 35vw;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 4;
+  grid-row: 1 / span 1;
+}
+.item3 {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.item4 {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+}
+
+.item5 {
+  grid-column: 4 / span 1;
+  grid-row: 2;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/banner.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 5vw;
+  }
+  .cuadrotexto {
+    font-size: 5vw;
+  }
+}
+</style>
+<body>
+
+
+
+<!-- Imagen de encabezado -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+<!-- Links del sitio -->
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="Index.html" class="w3-button w3-block w3-black">INICIO</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#contenido" class="w3-button w3-block w3-black">CONTENIDO</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#preguntas" class="w3-button w3-block w3-black">PREGUNTAS</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#temas" class="w3-button w3-block w3-black">TEMAS</a>
+      </div>
+    </div>
+</div>
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Jesús y la resurrección</span>
+  </div>
+</header>
+
+<!-- Color de la página -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Contenido -->
+<div class="w3-container" id="contenido">
+  <div class="w3-content" style="max-width:700px">
+    <h1 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CELEBRAMOS LA RESURRECCIÓN DE JESÚS EN CASA</span></h1>
+      <p>En este tiempo de pandemia hemos visto en nuestro pueblo de Casma, a muchas familias perder a sus seres queridos. Muchos cuidan su vida y respetan la cuarentena, cumplen con el lavado frecuente de manos, usan correctamente la mascarilla, respetan el distanciamiento social, pero por otra parte hay quienes no lo han cumplido solidariamente, atentando contra la salud de los demás. Aun así, celebramos con mucha alegría la Resurrección de Jesucristo.</p>
+      <p>Ante esta situación ¿Cómo podemos contribuir a formar una comunidad fraterna?</p>
+    <h2><i>REFLEXIONEMOS Y RESPONDAMOS</i></h2>
+      <p>¿Cuál es el principal problema que se presenta en nuestra comunidad?</p>
+      <p>¿Cómo celebraremos con alegría la Resurrección, ante el temor por el aumento de la pandemia?</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"TEXTO BIBLICO: HECHOS 26, 22-23"</i></p>
+      <p>22Pero, con la ayuda de Dios, seguí dando mi testimonio a grandes y pequeños hasta el día de hoy. En ningún momento me aparto de lo que Moisés y los Profetas dijeron de antemano: 23que el Mesías tenía que morir; que sería el primero en resucitar de entre los muertos, y después anunciaría la luz tanto a su pueblo como a las demás naciones.</p>
+    </div>
+    <h2><i>REFLEXIONEMOS Y RESPONDAMOS</i></h2>
+    <p>¿Qué entendemos del texto?</p>
+    <p>¿Qué significa, dar mi testimonio?</p>
+    <p>¿Qué debo ser yo en mi comunidad?</p>
+    <h2><i>EL DOMINGO DE RESURRECCIÓN</i></h2>
+    <p>Es el aniversario del triunfo de Cristo. Es la feliz conclusión del drama de la Pasión y la alegría inmensa que sigue al dolor</p>
+    <div class="w3-row w3-border" style="text-align: justify;">
+      <div class="w3-container w3-half w3-black">
+        <p>
+    ¿Cómo no alegrarse por la victoria de aquel que tan injustamente fue condenado a la pasión más terrible y a la muerte en la cruz?, ¿por la victoria de Aquel que anteriormente fue flagelado, abofeteado, ensuciado con salivazos, con tanta inhumana crueldad?
+        </p>
+      </div>
+      <div class="w3-container w3-half">
+        <p>
+    La Resurrección nos descubre nuestra vocación cristiana y nuestra misión: acercarla a todos los hombres. 
+    El hombre no puede perder jamás la esperanza en la victoria del bien sobre el mal.
+        </p>
+      </div>
+    </div>
+    
+    <div class="w3-row w3-border">
+      <p style="text-align: center;"><img src="img/img3.PNG" alt=""></p>
+    </div>
+
+    <div class="w3-row w3-border" style="text-align: justify;">
+      <div class="w3-container w3-half w3-black">
+        <p>
+    La Pascua es la celebración litúrgica más importante del año. Es un día en que reafirmamos nuestra fe en la Resurrección de Cristo entre los muertos.
+        </p>
+      </div>
+      <div class="w3-container w3-half">
+        <p>
+    Con alegría y con esperanza Celebramos la Resurrección de Cristo.
+        </p>
+      </div>
+    </div>
+    <!--<div class="grid-container">
+      <div class="grid-item item1 cuadrotexto" style="text-align: justify; font-size: 0.8vw;">
+        ¿Cómo no alegrarse por la 
+        victoria de aquel que tan 
+        injustamente fue condenado 
+        a la pasión más terrible y a la 
+        muerte en la cruz?, ¿por la 
+        victoria de Aquel que 
+        anteriormente fue flagelado, 
+        abofeteado, ensuciado con 
+        salivazos, con tanta inhumana 
+        crueldad?
+      </div>
+      <div class="grid-item item2 cuadrotexto" style="text-align: justify; font-size: 0.8vw;">
+        La Resurrección nos descubre 
+        nuestra vocación cristiana y 
+        nuestra misión: acercarla a 
+        todos los hombres. 
+        El hombre no puede perder 
+        jamás la esperanza en la 
+        victoria del bien sobre el mal.
+      </div>
+      <div class="grid-item item3" style="text-align: center;"><img src="img/img2.png" style="width:100%;max-width:1000px;height: 100%;" class=""></div>
+      <div class="grid-item item4 cuadrotexto" style="text-align: justify; font-size: 0.8vw;">
+        La Pascua es la 
+        celebración litúrgica más 
+        importante del año. Es 
+        un día en que 
+        reafirmamos nuestra fe 
+        en la Resurrección de 
+        Cristo entre los muertos.
+      </div>  
+      <div class="grid-item item5" style="text-align: justify; font-size: 0.8vw;">
+        Con alegría y con 
+        esperanza Celebramos la 
+        Resurrección de Cristo.
+      </div>
+    </div>-->
+    <h2><i>ACTIVIDAD</i></h2>
+    <p>A partir de lo aprendido, respondamos brevemente las siguientes preguntas</p>
+    <ol>1)¿Qué finalidad tiene celebrar en nuestra vida la Resurrección de Jesús?</ol>
+    <ol>2)¿Cómo puedes dar testimonio de la Resurrección de Jesús en tu familia?</ol>
+    <div class="container" id="preguntas"> 
+        <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSe-uahTMDx3WeJjba8zbYc5m7zresu5Lxo2FRMtpcWu7aSfbA/viewform?embedded=true"></iframe>
+    </div>
+    <br>
+  </div>
+</div>
+
+<!-- Fin del contenido -->
+</div>
+
+<footer class="w3-center w3-padding-48 w3-large" id="temas" style="background-color: #131313; color: white; padding-left: 10vw; padding-right: 10vw;">
+    <div class="division">
+        <p style="text-align: center;"><a href="Evaluación diagnóstica.html" target="_blank" style="text-decoration: none;">Evaluación diagnóstica</a></p>
+        <p style="text-align: center;"><a href="Semana Santa.html" target="_blank" style="text-decoration: none;">Semana Santa</a></p>
+        <p style="text-align: center;"><a href="Resurrección.html" target="_blank" style="text-decoration: none;">La Resurrección</a></p>
+        <p style="text-align: center;"><a href="Democracia.html" target="_blank" style="text-decoration: none;">La Democracia</a></p>
+        <!--<p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>
+
+        <p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>
+        <p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>
+        <p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>
+        <p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>
+        <p style="text-align: center;"><a href="tema.html" target="_blank" style="text-decoration: none;">tema</a></p>-->
+    </div>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
