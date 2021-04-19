@@ -51,33 +51,164 @@ body, html {
   border: none;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: #131313;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btnoculto {
+  display: none;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 9vw;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: relative;
+  top: 10px;
+  float: none;
+  font-size: 12vw;
+  text-align: right;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    display: block;
+  }
+  .menuoculto {
+    display: none;
+  }
+  .btnoculto {
+    display: block;
+  }
+}
 </style>
 <body>
-
-
-
 <!-- Imagen de encabezado -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
 <!-- Links del sitio -->
-<div class="w3-top">
-    <div class="w3-row w3-padding w3-black">
-      <div class="w3-col s3">
-        <a href="Index.html" class="w3-button w3-block w3-black">INICIO</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#contenido" class="w3-button w3-block w3-black">CONTENIDO</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#preguntas" class="w3-button w3-block w3-black">PREGUNTAS</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#temas" class="w3-button w3-block w3-black">TEMAS</a>
-      </div>
+
+<ul class="menuoculto" style="background-color: none;">
+  <li><a href="Index.html">INICIO</a></li>
+  <li><a href="#preguntas">PREGUNTAS</a></li>
+  <li><a href="#temas">TEMAS</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">DESCARGAR</a>
+    <div class="dropdown-content">
+      <a href="doc/Democracia.docx">WORD</a>
+      <a href="doc/Democracia.pdf">PDF</a>
+      <a href="doc/Democracia.png">IMÁGEN</a>
     </div>
-</div>
-  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Jesús y la democrácia</span>
+  </li>
+</ul>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-right: 10vw;">&times;</a>
+  <div class="overlay-content">
+    <ul style="background-color: none;">
+      <a href="Index.html">INICIO</a>
+      <a href="#temas">TEMAS</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">DESCARGAR</a>
+        <div class="dropdown-content" style="width: 100%;">
+          <a href="doc/Democracia.docx" style="text-align: center;">WORD</a>
+          <a href="doc/Democracia.pdf" style="text-align: center;">PDF</a>
+          <a href="doc/Democracia.png" style="text-align: center;">IMÁGEN</a>
+        </div>
+      </div>
+    </ul>
   </div>
+</div>
+<span style="font-size:9vw;cursor:pointer;color: white; padding-left: 4vw;" onclick="openNav()" class="btnoculto">&#9776;</span>
+<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Jesús y la democrácia</span>
+</div>
 </header>
 
 <!-- Color de la página -->
@@ -147,6 +278,22 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  function openDes() {
+    document.getElementById("Des").style.width = "100%";
+  }
+
+  function closeDes() {
+    document.getElementById("Des").style.width = "0%";
+  }
 </script>
 
 </body>
