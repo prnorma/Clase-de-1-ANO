@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>Evaluación Diagnóstica</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="icon" href="img/logo.png" type="image/x-icon">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.division {
+  column-fill: balance;
+  column-width: 35vw;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/banner.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: #131313;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btnoculto {
+  display: none;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 9vw;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: relative;
+  top: 10px;
+  float: none;
+  font-size: 12vw;
+  text-align: right;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    display: block;
+  }
+  .menuoculto {
+    display: none;
+  }
+  .btnoculto {
+    display: block;
+  }
+}
+</style>
+<body>
+<!-- Imagen de encabezado -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+<!-- Links del sitio -->
+
+<ul class="menuoculto" style="background-color: none;">
+  <li><a href="Index.html">INICIO</a></li>
+  <li><a href="#preguntas">PREGUNTAS</a></li>
+  <li><a href="#temas">TEMAS</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">DESCARGAR</a>
+    <div class="dropdown-content">
+      <a href="doc/Evaluación Diagnóstica.docx" download>WORD</a>
+      <a href="doc/Evaluación Diagnóstica.pdf" download>PDF</a>
+      <a href="doc/Evaluación Diagnóstica.rar" download>IMÁGEN</a>
+    </div>
+  </li>
+</ul>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-right: 10vw;">&times;</a>
+  <div class="overlay-content">
+    <ul style="background-color: none;">
+      <a href="Index.html">INICIO</a>
+      <a href="#temas">TEMAS</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">DESCARGAR</a>
+        <div class="dropdown-content" style="width: 100%;">
+          <a href="doc/Evaluación Diagnóstica.docx" style="text-align: center;" download>WORD</a>
+          <a href="doc/Evaluación Diagnóstica.pdf" style="text-align: center;" download>PDF</a>
+          <a href="doc/Evaluación Diagnóstica.rar" style="text-align: center;" download>IMÁGEN</a>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+<span style="font-size:9vw;cursor:pointer;color: white; padding-left: 4vw;" onclick="openNav()" class="btnoculto">&#9776; MENÚ</span>
+<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Evaluación Diagnóstica</span>
+</div>
+</header>
+
+<!-- Color de la página -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Contenido -->
+<div class="w3-container" id="contenido">
+  <div class="w3-content" style="max-width:700px">
+    <img src="img/encabezado.png" style="width:100%;max-width:1000px;padding-top: 64px;">
+    <h1 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">EVALUACIÓN DIAGNÓSTICA DEL ÁREA DE EDUCACIÓN RELIGIOSA</span></h1>
+    <h2 style="text-align: center;"><i>"EL CORONAVIRUS Y CÓMO NOS PREPARAMOS PARA PREVENIR EL CONTAGIO"</i></h2>
+    <h2><i>COMPETENCIAS SELECCIONADAS</i></h2>
+    <p>Asume la experiencia del encuentro personal y comunitario con Dios en su proyecto de vida en coherencia con su creencia religiosa.</p>
+    <img src="img/ED1.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <h2><i>SITUACIÓN SIGNIFICATIVA</i></h2>
+    <p>En la vida de las personas hay momentos muy difíciles: Enfermedades, accidentes, desastres naturales, 
+        problemas familiares, económicos, etc.</p>
+    <p>Ante esta realidad existen diversas reacciones, 
+        siendo la más frecuente encomendarse a Dios por medio de oraciones.</p>
+    <p>Jesús, nos dio ejemplo de oración, cuando oró por 40 días en el desierto pidiendo al Padre le de 
+        fuerzas para afrontar el momento difícil que se le acercaba de su crucifixión. Igualmente, 
+        su oración al Padre en el Monte de los Olivos, el Jueves Santo, nos demuestra que en los momentos 
+        difíciles de nuestra vida nos encomendamos a Dios y confiamos en su misericordia.</p>
+    <p>La situación que se vive en el mundo con la pandemia del Coronavirus desde marzo del año pasado, ha sido un tiempo para acrecentar la fe y el fervor religioso. Hoy más que nunca, la oración Ave María retumba en los corazones de millones de personas, porque el pedimento a la Virgen del "ruega por nosotros" es un clamor mundial.</p>
+    <p>En la oración del Padrenuestro que nos la enseñó Jesús, le pedimos al Padre amoroso que nos libre de todo mal, que nos puede hacer perder la vida o la amistad con Dios, por el pecado.</p>
+    <p>La oración al Espíritu Santo es también aclamada en muchos rincones del planeta, para que con su santidad acompañe a la Iglesia para que la humanidad recobre la paz y lo proteja ante este gran enemigo invisible.</p>
+    <h2><i>ANTE ESTA SITUACIÓN NOS PLANTEAMOS LAS SIGUIENTES PREGUNTAS</i></h2>
+    <p>¿Qué es la oración?</p>
+    <p>¿Quién nos enseñó a orar, y con qué oración?</p>
+    <p>¿Tenemos obligación de orar a Dios?</p>
+    <p>¿Cuándo y dónde se debe orar?</p>
+    <h2><i>Ahora, estimado estudiante, Busca en tu Biblia el siguiente texto: Mt.6, 9-13</i></h2>
+    <p>Responde: ¿De qué oración se trata? ¿a quién va dirigida esta oración? ¿Por qué Jesús nos dijo que lo llamáramos Padre?</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>"RETO"</i></p>
+        <p>Elabora una oración comunitaria de protección personal y familiar en diez líneas como mínimo que incluya el mensaje del texto bíblico en el contexto que vivimos en Casma por la pandemia.</p>
+    </div>
+    <h4><i>No te olvides, estimado estudiante, leer los criterios de evaluación que debes tener en cuenta en el momento de elaborar tu oración.</i></h4>
+    <img src="img/ED2.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <br><br>
+  </div>
+</div>
+
+<!-- Fin del contenido -->
+</div>
+
+<footer class="w3-center w3-padding-48 w3-large" id="temas" style="background-color: #131313; color: white; padding-left: 10vw; padding-right: 10vw;">
+    <div class="division">
+        <p style="text-align: center;"><a href="Evaluación diagnóstica.html" target="_blank" style="text-decoration: none;">Evaluación diagnóstica</a></p>
+        <p style="text-align: center;"><a href="Semana Santa.html" target="_blank" style="text-decoration: none;">Semana Santa</a></p>
+        <p style="text-align: center;"><a href="Resurrección.html" target="_blank" style="text-decoration: none;">La Resurrección</a></p>
+        <p style="text-align: center;"><a href="Democracia.html" target="_blank" style="text-decoration: none;">La Democracia</a></p>
+        <p style="text-align: center;"><a href="María Madre.html" target="_blank" style="text-decoration: none;">María Madre</a></p>
+    </div>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  function openDes() {
+    document.getElementById("Des").style.width = "100%";
+  }
+
+  function closeDes() {
+    document.getElementById("Des").style.width = "0%";
+  }
+</script>
+
+</body>
+</html>
